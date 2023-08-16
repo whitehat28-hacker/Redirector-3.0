@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <meta property="og:image" content="css/absent007.jpg">
+        <title> Redirector-3.0 </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+               /* Clock styles */
+      #clock {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 10px;
+        color: rgb(131, 242, 250);
+        font-size: 45px;
+      }
+       .social-links {
+        margin-top: 30px;
+        text-align: center;
+      }
+      
+      .social-links a {
+        display: inline-block;
+        margin: 0 30px;
+        color: #6fe500;
+        font-size: 80px;
+      }
+      
+      .social-links a:hover {
+        color: #0122f7;
+      }
+     
+      .hidden {
+        display: none;
+      }
+       
+
+        </style>
+      </head>
+      
+   <body>
+    <h1> Redirector-2.0 </h1>
+        <!-- Clock element -->
+        <div id="clock"></div>
+
+    <form onsubmit="generateRedirectUrl(); return false;">
+      <label for="long-url">Enter URL:</label>
+      <input type="text" id="long-url" name="long-url" required>
+      <input type="submit" value="Genarate URL">
+    </form>
+    <p id="result"></p>
+    <button id="copy-btn">Copy to Clipboard</button>
+
+  
+</div>
+<div class="social-links">
+  <a href="https://www.facebook.com/absent007.official" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://wa.me/8801773633328" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+
+    
+    <script src="js/script.js"></script>  
+    <script>
+     
+  
+     const redirToken = "QUFFLUhqbTFmU3B6ejJ0Rm9QYzJqRl91ZThTOExwTzM1UXxBQ3Jtc0ttYkszZUl6NUdwaW8zX0tpLVRRUmZtODl0VFNNTU9jUXlLcHJsdHRvNG5fZUhKNGR3OG5PaXVVZ240RzA2VmMzR3ZYeXZfY21ROHkwemVHdGJvalhka0dqdVQ5eWlKNE5ib0FqQ0dFNy01WE1xd0hkYw&q";
+
+  
+  <!-- Clock script -->
+    
+      setInterval(function() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var amPm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // The hour '0' should be '12'
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        var time = hours + ':' + minutes + ':' + seconds + ' ' + amPm;
+        document.getElementById('clock').innerHTML = time;
+      }, 1000);
+
+  
+    </script>  
+  </body>
+
+</html>
